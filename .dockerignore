@@ -1,5 +1,4 @@
 node_modules/
-pgdata/
 *.log
-.env
 dist/
+.git/

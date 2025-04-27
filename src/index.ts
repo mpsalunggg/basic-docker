@@ -1,10 +1,13 @@
 import express, { Request, Response } from 'express'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 app.get('/', (_req: Request, res: Response) => {
-  res.send('Hello gesss!')
+  res.send('Hello sdasda asdasasdasdasdd gessssssss!')
 })
 
 app.listen(PORT, () => {
