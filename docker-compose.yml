@@ -18,13 +18,12 @@ services:
       - my_network 
     develop:
       watch:
-        - action: sync
-          path: ./src
-          target: /app/src
-          ignore:
+        - action: rebuild  # akan membangun ulang ketika file berubah
+          path: ./         # pantau seluruh direktori
+          ignore:          # abaikan file-file yang tidak relevan
             - node_modules/
-        - action: rebuild
-          path: package.json
+            - .git/
+            - pgdata/
 
   postgres:
     image: postgres:14
