@@ -18,9 +18,9 @@ services:
       - my_network 
     develop:
       watch:
-        - action: rebuild  # akan membangun ulang ketika file berubah
-          path: ./         # pantau seluruh direktori
-          ignore:          # abaikan file-file yang tidak relevan
+        - action: rebuild
+          path: ./        
+          ignore:          
             - node_modules/
             - .git/
             - pgdata/
